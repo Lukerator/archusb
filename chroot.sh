@@ -33,4 +33,4 @@ refind-install
 echo "Edit refind_linux.conf if needed. Add 'root=LABEL=ROOT rw splash'"
 echo "Don't forget to run luke.sh!!"
 
-su luke
+su luke -s /usr/bin/bash -c cd
