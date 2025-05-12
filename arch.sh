@@ -29,7 +29,9 @@ pacstrap -K /mnt \
 
 genfstab -L /mnt >> /mnt/etc/fstab
 
+chmod +x chroot.sh
+chmod +x luke.sh
 cp chroot.sh /mnt/chroot.sh
 cp luke.sh /mnt/home/luke/luke.sh
 
-arch-chroot /mnt
+arch-chroot /mnt /chroot.zh
