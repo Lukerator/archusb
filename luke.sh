@@ -59,7 +59,7 @@ echo "CleanAfter" > ~/.config/paru/paru.conf
 echo "" > ~/.config/paru/paru.conf
 echo "[bin]" > ~/.config/paru/paru.conf
 echo "Sudo = doas" > ~/.config/paru/paru.conf
-doas pacman -S paru
+doas pacman --noconfirm -S paru
 
 # Clean up bash files and cache
 rm -rf ~/.bash* ~/.cache
