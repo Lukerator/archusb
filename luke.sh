@@ -63,5 +63,6 @@ doas pacman --noconfirm -S paru
 
 # Clean up bash files and cache
 rm -rf ~/.bash* ~/.cache
+doas rm -f /chroot.sh
 
 doas nvim /etc/refind_linux.conf
