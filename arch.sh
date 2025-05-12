@@ -30,5 +30,3 @@ pacstrap -K /mnt \
 genfstab -L /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt
-
-echo "All done. You may now reboot!"
