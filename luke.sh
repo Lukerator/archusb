@@ -65,4 +65,5 @@ doas pacman --noconfirm -S paru
 rm -rf ~/.bash* ~/.cache
 doas rm -f /chroot.sh
 
+echo "Edit refind_linux.conf if needed. Add 'root=LABEL=ROOT rw splash'"
 doas nvim /etc/refind_linux.conf
