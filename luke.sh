@@ -53,5 +53,4 @@ echo "Sudo = doas" >> ~/.config/paru/paru.conf
 # Clean up bash files and cache
 rm -rf ~/.bash* ~/.cache
 
-echo "Edit refind_linux.conf if needed. Add 'root=LABEL=ROOT rw splash'"
-doas nvim /boot/refind_linux.conf
+nvim /etc/fstab
