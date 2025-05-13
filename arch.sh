@@ -14,7 +14,7 @@ umount /mnt
 mount -o noatime,compress=zstd,autodefrag,subvol=@ /dev/nvme0n1p2 /mnt
 mkdir -p /mnt/{boot,home,snapshots}
 mount -o noatime,compress=zstd,autodefrag,subvol=@home /dev/nvme0n1p2 /mnt/home
-noatime,compress=zstd,autodefrag,subvol=@snapshots /dev/nvme0n1p2 /mnt/snapshots
+mount -o noatime,compress=zstd,autodefrag,subvol=@snapshots /dev/nvme0n1p2 /mnt/snapshots
 mount /dev/nvme0n1p1 /mnt/boot
 
 pacstrap -K /mnt \
@@ -32,6 +32,7 @@ genfstab -L /mnt >> /mnt/etc/fstab
 chmod +x chroot.sh
 chmod +x luke.sh
 cp chroot.sh /mnt/chroot.sh
+mkdir /mnt/home/luke
 cp luke.sh /mnt/home/luke/luke.sh
 
 arch-chroot /mnt /chroot.zh
