@@ -53,4 +53,4 @@ echo "Sudo = doas" >> ~/.config/paru/paru.conf
 rm -rf ~/.bash* ~/.cache
 
 echo "Edit refind_linux.conf if needed. Add 'root=LABEL=ROOT rw splash'"
-doas nvim /etc/refind_linux.conf
+doas nvim /boot/refind_linux.conf
