@@ -6,22 +6,8 @@ mkfs.fat -F32 /dev/nvme0n1p1
 fatlabel /dev/nvme0n1p1 BOOT
 mkfs.btrfs -f /dev/nvme0n1p2 -L ROOT
 
-# Mount the root partition and create subvolumes
-mount /dev/nvme0n1p2 /mnt
-btrfs su cr /mnt/@
-btrfs su cr /mnt/@home
-btrfs su cr /mnt/@snapshots
-umount /mnt
-
 # Mount root subvolume
-mount -o noatime,compress=zstd,subvol=@ /dev/nvme0n1p2 /mnt
-
-# Create directories for boot, home, and snapshots
-mkdir -p /mnt/{boot,home,.snapshots}
-
-# Mount @home and @snapshots subvolumes
-mount -o noatime,compress=zstd,subvol=@home /dev/nvme0n1p2 /mnt/home
-mount -o noatime,compress=zstd,subvol=@snapshots /dev/nvme0n1p2 /mnt/.snapshots
+mount -o autodefrag,compress=zstd /dev/nvme0n1p2 /mnt
 
 # Mount the EFI partition
 mount /dev/nvme0n1p1 /mnt/boot
