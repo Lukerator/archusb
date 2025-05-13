@@ -5,7 +5,7 @@ set -e
 mkdir -p /home/luke/.config/zsh/antidote
 
 # Set ZDOTDIR by adding it to .zshenv
-echo "export ZDOTDIR=/home/luke/.config/zsh" > /home/luke/.zshenv
+echo "ZDOTDIR=/home/luke/.config/zsh" > /home/luke/.zshenv
 
 # Create .zshrc
 echo "# Source Antidote" > /home/luke/.config/zsh/.zshrc
@@ -13,7 +13,7 @@ echo "source \$ZDOTDIR/antidote/antidote.zsh" >> /home/luke/.config/zsh/.zshrc
 echo "antidote load" >> /home/luke/.config/zsh/.zshrc
 echo "" >> /home/luke/.config/zsh/.zshrc
 echo "# Set prompt" >> /home/luke/.config/zsh/.zshrc
-echo "PROMPT='%F{cyan}%~%f %(?.%F{green}%(#.root.%F{red}⟼%f.%F{green}➜%f)%f.%F{red}⟼%f.%F{green}➜%f)%f '" >> /home/luke/.config/zsh/.zshrc
+echo "PROMPT='%F{cyan}%~%f %(?.%F{green}%(#.➼.➜)%f.%F{red}%(#.➼.➜)%f) '" >> /home/luke/.config/zsh/.zshrc
 echo "" >> /home/luke/.config/zsh/.zshrc
 echo "# Bindings for history" >> /home/luke/.config/zsh/.zshrc
 echo "bindkey '^[[A' history-substring-search-up" >> /home/luke/.config/zsh/.zshrc
@@ -47,18 +47,18 @@ doas pacman-key --lsign-key 3056513887B78AEB
 doas pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
 doas pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-doas echo "" > /etc/pacman.conf
-doas echo "[chaotic-aur]" > /etc/pacman.conf
-doas echo "Include = /etc/pacman.d/chaotic-mirrorlist" > /etc/pacman.conf
+doas echo "" >> /etc/pacman.conf
+doas echo "[chaotic-aur]" >> /etc/pacman.conf
+doas echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 
 # Install paru
 mkdir ~/.config/paru
 echo "[options]" > ~/.config/paru/paru.conf
-echo "BottomUp" > ~/.config/paru/paru.conf
-echo "CleanAfter" > ~/.config/paru/paru.conf
-echo "" > ~/.config/paru/paru.conf
-echo "[bin]" > ~/.config/paru/paru.conf
-echo "Sudo = doas" > ~/.config/paru/paru.conf
+echo "BottomUp" >> ~/.config/paru/paru.conf
+echo "CleanAfter" >> ~/.config/paru/paru.conf
+echo "" >> ~/.config/paru/paru.conf
+echo "[bin]" >> ~/.config/paru/paru.conf
+echo "Sudo = doas" >> ~/.config/paru/paru.conf
 doas pacman --noconfirm -S paru
 
 # Clean up bash files and cache
