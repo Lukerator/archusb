@@ -34,22 +34,11 @@ echo "alias grep='grep --color=auto'" >> /home/luke/.config/zsh/.zshrc
 
 # Create .zsh_plugins.txt for Antidote
 echo "zsh-users/zsh-autosuggestions" > /home/luke/.config/zsh/.zsh_plugins.txt
-echo "zsh-users/zsh-substring-history-search" >> /home/luke/.config/zsh/.zsh_plugins.txt
+echo "zsh-users/zsh-history-substring-search" >> /home/luke/.config/zsh/.zsh_plugins.txt
 echo "zdharma-continuum/fast-syntax-highlighting kind:defer" >> /home/luke/.config/zsh/.zsh_plugins.txt
 
 # Clone antidote repo
 git clone --depth 1 https://github.com/mattmc3/antidote.git /home/luke/.config/zsh/antidote
-
-# Install Chaotic-AUR
-doas pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-doas pacman-key --lsign-key 3056513887B78AEB
-
-doas pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
-doas pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-
-doas echo "" >> /etc/pacman.conf
-doas echo "[chaotic-aur]" >> /etc/pacman.conf
-doas echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 
 # Install paru
 mkdir ~/.config/paru
@@ -59,11 +48,9 @@ echo "CleanAfter" >> ~/.config/paru/paru.conf
 echo "" >> ~/.config/paru/paru.conf
 echo "[bin]" >> ~/.config/paru/paru.conf
 echo "Sudo = doas" >> ~/.config/paru/paru.conf
-doas pacman --noconfirm -S paru
 
 # Clean up bash files and cache
 rm -rf ~/.bash* ~/.cache
-doas rm -f /chroot.sh
 
 echo "Edit refind_linux.conf if needed. Add 'root=LABEL=ROOT rw splash'"
 doas nvim /etc/refind_linux.conf
