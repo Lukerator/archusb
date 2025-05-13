@@ -18,7 +18,7 @@ echo "Luke-PC" > /etc/hostname
 passwd
 
 # Add user
-useradd -m -G wheel,audio,video,network,storage,power,lp,input -c "Luke" -s /usr/bin/zsh luke
+useradd -G wheel,audio,video,network,storage,power,lp,input -c "Luke" -s /usr/bin/zsh luke
 passwd luke
 
 # Allow wheel group to use doas
@@ -28,5 +28,8 @@ systemctl enable NetworkManager
 
 refind-install
 
+echo "" >> /etc/pacman.conf
+echo "[cahotic-aur]" >> /etc/pacman.conf
+echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 
 su luke -s /usr/bin/bash -c "cd && ~/luke.sh && rm ~/luke.sh"
