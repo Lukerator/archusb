@@ -41,7 +41,8 @@ echo "zdharma-continuum/fast-syntax-highlighting kind:defer" >> /home/luke/.conf
 git clone --depth 1 https://github.com/mattmc3/antidote.git /home/luke/.config/zsh/antidote
 
 # Install paru
-mkdir ~/.config/paru
+mkdir -p ~/.config/paru/tmp
+rm -rf ~/.config/paru/tmp
 echo "[options]" > ~/.config/paru/paru.conf
 echo "BottomUp" >> ~/.config/paru/paru.conf
 echo "CleanAfter" >> ~/.config/paru/paru.conf
