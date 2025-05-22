@@ -1,0 +1,375 @@
+nvim archusb/chroot-artix.sh
+doas chmod ugo+rwx archusb/
+nvim archusb/chroot-artix.sh
+doas chmod ugo+rwx archusb/*
+nvim archusb/chroot-artix.sh
+clear
+paru hyprland
+nmtui
+paru -Syu hyprland --needed
+clear
+hyprland
+clear
+paru otf-monaspace
+nvim .config/hypr/hyprland.conf
+paru -Syu ghostty --needed
+nvim .config/hypr/hyprland.conf
+paru mona sans
+paru monasans
+paru mona-sans
+clear
+paru ttf-mona-sans
+doas nvim /etc/pacman.conf
+paru ttf-mona-sans -Syu
+clear
+paru monaspace
+clear
+ghostty +list-fonts
+ghostty +list-fonts | grep MonaspiceNe NFM
+ghostty +list-fonts | grep "MonaspiceNe NFM"
+ghostty +list-fonts | grep "MonaspiceNe NF"
+ghostty +list-fonts | grep "MonaspiceNe"
+mkdir .config/ghostty
+nvim .config/ghostty/config
+paru midori-bin
+paru -Syu midori-bin --needed
+clear
+nvim .config/ghostty/config
+ls /usr/share/ghostty/
+ls /usr/share/ghostty/themes/
+nvim .config/ghostty/config
+clear
+nvim .config/ghostty/config
+clear
+nvim .config/hypr/hyprland.conf
+clear
+mkdir .config/nvim/lua
+mkdir .config/nvim/lua/config
+mkdir .config/nvim/lua/plugins
+mkdir .config/nvim/lua/misc
+mkdir .config/nvim/lua/keymaps
+clear
+nvim .config/ghostty/config
+ghostty +list-fonts | grep "MonaspiceNe"
+nvim .config/ghostty/config
+clear
+gh auth login
+paru github-cli -Syu --needed
+cp /etc/pacman.conf ./
+ls
+doas chmod ugo+rwx pacman.conf
+nvim .config/hypr/hyprland.conf
+ls
+clear
+rm archusb/pacman.conf
+cp pacman.conf archusb/
+ls archusb/
+clear
+config nu
+nvim .config/nushell/config.nu
+config nu
+nvim .config/nushell/config.nu
+config nu
+nvim .config/nushell/config.nu
+paru acpi
+clear
+nvim .config/nushell/config.nu
+clear
+nvim .config/nushell/config.nu
+clear
+nvim .config/nushell/config.nu
+clear
+nvim .config/nushell/config.nu
+/
+~
+clear
+nvim .config/nushell/config.nu
+test \
+nvim .config/ghostty/config
+nvim .config/nvim/lua/misc/lazy-boot.lua
+nvim .config/nvim/lua/misc/lazy-plugins.lua
+nvim .config/nvim/lua/misc/highlightyank.lua
+clear
+nvim .config/nvim/lua/config/globals.lua
+nvim .config/nvim/lua/config/options.lua
+clear
+nvim .config/nvim/lua/plugins/theme.lua
+nvim .config/nvim/init.lua
+nvim .config/nvim/lua/misc/lazy-plugins.lua
+nvim .config/nvim/init.lua
+clear
+paru pipewire
+paru pipewire-s6
+paru pipewire | grep s6
+clear
+paru pipewire
+doas pacman -S pipewire pipewire-pulse wireplumber pipewire-alsa
+doas pacman -Syu --needed pipewire pipewire-pulse wireplumber pipewire-alsa
+clear
+nvim .config/hypr/hyprland.conf
+hyprland
+paru swayosd
+nvim .config/hypr/hyprland.conf
+clear
+ls /etc/s
+ls /etc
+job spawn { swayosd-server }
+swayosd-client --raise
+job spawn { swayosd-libinput-backend  }
+nvim .config/hypr/hyprland.conf
+swayosd-client --raise
+dbus-launch 
+clear
+doas su
+clear
+doas nvim /etc/s6/config/user-services.conf
+ls /etc/s6/sv/
+exit
+su luke
+clear
+ls /
+mkdir /scripts
+doas mkdir /scripts
+doas nvim /scripts/s6-local.sh
+clear
+doas nvim /usr/bin/doas
+doas nvim /usr/bin/acpi
+doas nvim /usr/bin/bash
+doas nvim /bin/bash
+ls /usr/sbin
+cat /usr/sbin/acpi
+clear
+doas chmod +x /scripts/s6-local.sh
+doas cp /scripts/s6-local.sh /usr/bin/
+s6-local
+s6-local.sh 
+doas mv /bin/s6-local.sh /usr/bin/s6-local
+s6-local 
+mkdir .local/share/s6
+mkdir .local/share/s6/sv
+s6-local 
+clear
+mkdir .local/share/s6/sv/pipewire
+nvim .local/share/s6/sv/pipewire/run
+nvim .local/share/s6/sv/pipewire/type
+s6-local 
+s6-rc-compile ~/.local/share/s6/rc/compiled-$(date) ~/.local/share/s6/sv
+s6-rc-compile ~/.local/share/s6/rc/compiled-1 ~/.local/share/s6/sv
+mkdir .local/share/s6/rc
+doas nvim /usr/bin/s6-local
+doas mv /bin/s6-local /scripts/s6-local
+doas rm /scripts/s6-local.sh
+doas nvim /usr/bin/s6-local
+doas mv /scripts/s6-local /scripts/s6-local.sh
+doas chmod +x /usr/bin/s6-local
+s6-local
+rm -rf .local/share/s6/rc/compiled-1747937628/
+s6-local
+doas nvim /scripts/s6-local.sh
+s6-local
+clear
+ls .local/share/s6/rc/compiled
+ls .local/share/s6/rc/compiled/servicedirs/
+cp -r .local/share/s6/sv/pipewire .local/share/s6/sv/pipewire-pulse
+cp -r .local/share/s6/sv/pipewire .local/share/s6/sv/wireplumber
+nvim .local/share/s6/sv/pipewire-pulse/run
+nvim .local/share/s6/sv/wireplumber/run
+s6-local
+ls .local/share/s6/rc/compiled/servicedirs/
+doas mkdir -p /etc/s6/adminsv/user-services/contents.d
+doas nvim /usr/bin/s6-local
+s6-local
+exit
+doas nvim /usr/bin/s6-local
+doas mkdir -p /etc/s6/adminsv/user-services/contents.d
+touch /etc/s6/adminsv/user-services/contents.d/local-s6-user
+doas touch /etc/s6/adminsv/user-services/contents.d/local-s6-user
+doas touch /etc/s6/adminsv/user-services/contents.d/local-s6-rc-user
+doas echo "bundle" > /etc/s6/adminsv/user-services/type
+mkdir -p /etc/s6/adminsv/local-s6-user/dependencies.d
+mkdir /etc/s6/adminsv/local-s6-user/dependencies.d
+doas mkdir /etc/s6/adminsv/local-s6-user/dependencies.d
+doas mkdir /etc/s6/adminsv/local-s6-user/
+doas mkdir /etc/s6/adminsv/local-s6-user/dependencies.d
+doas touch /etc/s6/adminsv/local-s6-user/dependencies.d/mount-filesystems
+doas echo "3" > /etc/s6/adminsv/local-s6-user/notification-fd
+doas echo "longrun" > /etc/s6/adminsv/local-s6-user/type
+clear
+doas nvim /etc/s6/adminsv/local-s6-user/run
+mkdir -p /etc/s6/adminsv/local-s6-rc-user/dependencies.d
+doas mkdir /etc/s6/adminsv/local-s6-rc-user/dependencies.d
+doas mkdir /etc/s6/adminsv/local-s6-rc-user/
+doas mkdir /etc/s6/adminsv/local-s6-rc-user/dependencies.d
+doas touch /etc/s6/adminsv/local-s6-rc-user/dependencies.d/mount-filesystems
+doas touch /etc/s6/adminsv/local-s6-rc-user/dependencies.d/local-s6-user
+doas echo "oneshot" > /etc/s6/adminsv/local-s6-rc-user/type
+bash
+s6-rc -u change user-services
+doas s6-rc -u change user-services
+s6-local
+pkill pipewire
+bash
+nvim .config/hypr/hyprland.conf
+clear
+nvim .config/hypr/hyprland.conf
+swayosd-client --raise
+clear
+nvim .config/hypr/hyprland.conf
+wpctl
+paru -Rns swayosd
+clear
+nvim .config/hypr/hyprland.conf
+ls /etc/s6/
+ls /etc/s6/adminsv/
+doas rm /etc/s6/adminsv/local-s6-* -r
+ls /etc/s6/adminsv/
+doas rm /etc/s6/adminsv/user-services/
+doas rm /etc/s6/adminsv/user-services/ -r
+ls /etc/s6/config/
+doas rm /etc/s6/config/user-services.conf -r
+doas rm /etc/s6/rc/compiled/servicedirs/local-s6-user/
+doas rm /etc/s6/rc/compiled/servicedirs/local-s6-user/ -r
+ls /etc/s6/sv/
+clear
+rm .local/share/s6/ -r
+clear
+doas s6-db-reload 
+doas rm /etc/s6/rc/compiled-174793*
+doas rm /etc/s6/rc/compiled-174793* -r
+ls /etc/s6/rc/
+clear
+nvim .config/hypr/hyprland.conf
+ls /usr/share/
+ls /usr/share/wayland-sessions/
+cd /usr/share/wayland-sessions/
+ls
+clear
+nvim hyprland.desktop
+doas nvim hyprland.desktop
+doas rm hyprland-uwsm.desktop
+exit
+doas nvim /usr/share/wayland-sessions/hyprland.desktop
+Hyprland -q
+clear
+config nu
+nvim .config/nvim/lua/keymaps/fzf.lua
+paru -S fzf
+clear
+paru hyprscroll
+hyprpm add https://github.com/dawsers/hyprscroller
+paru -Syu cmake meson cpio pkg-config git g++ gcc
+paru base-devel
+paru -Syu cmake meson cpio g++
+hyprpm add https://github.com/dawsers/hyprscroller
+clear
+hyprpm list
+clear
+nvim .config/nvim/lua/plugins/fzf.lua
+nvim .config/nvim/init.lua
+paru ripgrep
+paru -Rns cmake meson cpio
+clear
+nvim .config/nvim/init.lua
+nvim .config/nvim/lua/keymaps/fzf.lua
+clear
+nvim .config/nvim/lua/keymaps/fzf.lua
+clear
+nvim .config/nvim/lua/plugins/treesitter.lua
+clear
+nvim .config/nvim/lua/plugins/treesitter.lua
+nvim .config/nvim/lua/plugins/fzf.lua
+clear
+nvim .config/nvim/lua/plugins/oil.lua
+nvim .config/nvim/lua/keymaps/oil.lua
+nvim .config/nvim/lua/keymaps/fzf.lua
+nvim .config/nvim/lua/keymaps/oil.lua
+nvim .config/nvim/init.lua
+nvim .config/nvim/lua/plugins/oil.lua
+clear
+nvim .config/nvim/lua/plugins/oil.lua
+nvim .config/nvim/lua/plugins/fzf.lua
+paru -Syu --needed neovide
+nvim .config/hypr/hyprland.conf
+nvim
+clear
+nvim .config/nvim/lua/plugins/oil.lua
+nvim .config/hypr/hyprland.conf
+nvim .config/nvim/lua/plugins/lualine.lua
+clear
+nvim .config/nvim/lua/plugins/conform.lua
+paru stylua
+clear
+paru clang format
+paru clang-format
+clear
+paru clang
+clear
+nvim .config/nvim/lua/plugins/conform.lua
+paru wayland clipboard
+gh auth login
+clear
+cd archusb/
+ls
+git commit -m "bruh" -a
+doas chmod ugo+rwx pacman.conf
+doas chmod ugo+rwx *
+git commit -m "bruh" -a
+doas chmod ugo+rwx .*
+doas chmod ugo+rwx ./*
+doas chmod ugo+rwx ./.*
+git commit -m "bruh" -a
+git config --global --add safe.directory /home/luke/archusb
+git commit -m "bruh" -a
+git add --all
+cd .git/
+chgrp -R groupname .
+chmod -R g+rwX .
+doas chmod -R g+rwX .
+doas find . -type d -exec chmod g+s '{}' +
+clear
+cd ..
+git add --all
+doas chmod -R g+rwX .
+doas find . -type d -exec chmod g+s '{}' +
+git add --all
+nvim artix.sh
+rm artix.sh
+nvim artix.sh
+nvim chroot-arch.sh
+rm chroot-arch.sh
+nvim chroot-arch.sh
+nvim chroot-artix.sh
+rm chroot-artix.sh
+nvim chroot-artix.sh
+nvim live.sh
+rm live.sh
+nvim live.sh
+rm luke.sh
+nvim luke.sh
+clear
+rm pacman.conf
+nvim pacman.conf
+git add --all
+rm -r .git
+doas rm -r .git
+cd ..
+git clone git@github.com:Lukerator/archusb.git archaah
+git clone https://github.com/Lukerator/archusb.git archaah
+mv archaah/.git archusb/.git
+cd archusb/
+ls -a
+nvim README.md
+rm README.md
+nvim README.md
+git add --all
+git commit -m "bruh" -a
+git config --global user.email "lucadarius41@yahoo.com"
+git config --global user.name "Lukerator"
+git commit -m "bruh" -a
+git push
+clear
+cd ..
+rm -r archaah/
+clear
+ls .config/
+cp -r .config/ghostty archusb/ghostty

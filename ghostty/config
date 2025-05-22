@@ -1,0 +1,8 @@
+font-style = Medium
+window-padding-x = 5
+window-padding-y = 5
+theme = tokyonight_night
+app-notifications = false
+font-style-italic = Medium Italic
+font-family = MonaspiceNe Nerd Font Mono
+keybind = ctrl+enter=unbind

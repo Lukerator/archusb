@@ -10,4 +10,7 @@ echo "" >> ~/.config/paru/paru.conf
 echo "[bin]" >> ~/.config/paru/paru.conf
 echo "Sudo = doas" >> ~/.config/paru/paru.conf
 
+mv ./hypr ~/.config/hypr
+mv ./nushell ~/.config/nushell
+
 rm -rf ~/.bash* ~/.cache
