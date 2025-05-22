@@ -108,5 +108,15 @@ case "$choice" in
 			refind networkmanager-s6 dbus-s6 intel-ucode \
 			linux-cachyos-bore-headers linux-cachyos-bore-nvidia-open \
 			nushell git neovim paru ly-s6
+    fstabgen -L /mnt >> /mnt/etc/fstab
+
+    chmod +x ./chroot-artix.sh
+    chmod +x ./luke.sh
+    cp chroot-artix.sh /mnt/chroot.sh
+    cp luke.sh /mnt/luke.sh
+
+    cp ./pacman.conf /mnt/pacman.conf
+
+    artix-chroot /mnt
 		;;
 esac
