@@ -5,8 +5,8 @@ touch /etc/s6/adminsv/default/contents.d/dbus
 touch /etc/s6/adminsv/default/contents.d/NetworkManager
 touch /etc/s6/adminsv/default/contents.d/ly
 echo "tty = 7" >> /etc/ly/config.ini
-s6-db-reload
 rm -rf /etc/s6/rc/compiled-*
+s6-db-reload
 
 ln -sf /usr/share/zoneinfo/Europe/Bucharest /etc/localtime
 hwclock --systohc
@@ -36,8 +36,12 @@ pacman -U 'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-v3-mirrorlist-
 pacman -U 'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-v4-mirrorlist-22-1-any.pkg.tar.zst'
 pacman -U 'https://mirror.cachyos.org/repo/x86_64/cachyos/pacman-7.0.0.r6.gc685ae6-3-x86_64.pkg.tar.zst'
 
-echo "COPY THIS: root=LABEL=ROOT rw noatime nodiratime autodefrag compress=zstd quiet splash" >> /boot/refind.conf
-nvim /boot/refind.conf
+rm /etc/pacman.conf
+mv /pacman.conf /etc/pacman.conf
+
+refind-install
+echo "COPY THIS: root=LABEL=ROOT rw noatime nodiratime autodefrag compress=zstd quiet splash" >> /boot/refind_linux.conf
+nvim /boot/refind_linux.conf
 
 cp luke.sh /home/luke/luke.sh
 cd /home/luke
