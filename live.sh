@@ -112,10 +112,12 @@ case "$choice" in
 
     chmod +x ./chroot-artix.sh
     chmod +x ./luke.sh
-    cp chroot-artix.sh /mnt/chroot.sh
-    cp luke.sh /mnt/luke.sh
+    mv chroot-artix.sh /mnt/chroot.sh
+    mv luke.sh /mnt/luke.sh
 
-    cp ./pacman.conf /mnt/pacman.conf
+    mv ./pacman.conf /mnt/pacman.conf
+    mv ./nushell /mnt/nushell
+    mv ./hypr /mnt/hypr
 
     artix-chroot /mnt
 		;;

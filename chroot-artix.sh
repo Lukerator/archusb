@@ -23,8 +23,8 @@ passwd
 useradd -m -G wheel,audio,video,network,storage,power,lp,input -c "Luke" -s /usr/bin/nu luke
 passwd luke
 
-echo "permit nopass luke cmd /usr/bin/halt" > /etc/doas.conf
-echo "permit nopass luke cmd /usr/bin/reboot" > /etc/doas.conf
+echo "permit nopass luke cmd /usr/bin/halt" >> /etc/doas.conf
+echo "permit nopass luke cmd /usr/bin/reboot" >> /etc/doas.conf
 echo "permit persist setenv {PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin} luke" > /etc/doas.conf
 
 pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'

@@ -16,3 +16,6 @@ $env.PROMPT_COMMAND_RIGHT = {
 
   $"(ansi $color)($state) ($percent)%(ansi reset)"
 }
+
+alias halt = doas /usr/bin/halt
+alias reboot = doas /usr/bin/reboot
